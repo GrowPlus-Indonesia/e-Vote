@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+.bg {
+    width: 100vw;
+    height: 100dvh;
+    position: fixed;
+    z-index: 1;
+}
+.bulat {
+    width: 10vw;
+    min-width: 200px;
+    height: 10vh;
+    min-height: 200px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+}
+.bulat:nth-child(1) {
+    background-color: #6439FF;
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 100px 110px #6439FF;
+    animation: turun 10s ease-in-out infinite;
+}
+.bulat:nth-child(2) {
+    background-color: #A594F9;
+    bottom: 0;
+    box-shadow: 0 0 100px 110px #A594F9;
+    animation: naik 10s ease-in-out infinite;
+}
+
+@keyframes turun {
+    0% {}
+    50% {
+        transform: translateY(100dvh);
+    }
+    100% {}
+}
+@keyframes naik {
+    0% {}
+    50% {
+        transform: translateY(-100dvh);
+    }
+    100% {}
+}
