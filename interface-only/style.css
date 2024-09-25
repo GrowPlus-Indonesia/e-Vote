@@ -114,10 +114,10 @@ header > svg {
     width: 100%;
     height: 100%;
     background: var(--base);
-background: -moz-linear-gradient(60deg, var(--base) 0%, rgba(120,130,255,1) 100%);
-background: -webkit-linear-gradient(60deg, var(--base) 0%, rgba(120,130,255,1) 100%);
-background: linear-gradient(60deg, var(--base) 0%, rgba(120,130,255,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--base),endColorstr="rgba(255,255,255,0.5)",GradientType=1);
+    background: -moz-linear-gradient(60deg, var(--base) 0%, rgba(120,130,255,1) 100%);
+    background: -webkit-linear-gradient(60deg, var(--base) 0%, rgba(120,130,255,1) 100%);
+    background: linear-gradient(60deg, var(--base) 0%, rgba(120,130,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--base),endColorstr="rgba(255,255,255,0.5)",GradientType=1);
     top: 0;
     left: 0;
     z-index: -1;
@@ -213,8 +213,62 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--base),end
 
 .login-wrapper {
     height: 100%;
-    width: 100%;
+    width: calc(100% + 40px);
+    margin-left: -20px;
     flex: 1;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.login-wrapper > .bulat {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: 0 15px 20px rgba(0,0,0, 0.1);
+    position: absolute;
+    z-index: -1;
+}
+.login-wrapper > .bulat:nth-child(1) {
+    top: 0;
+    left: 0;
+    background-color: var(--base);
+}
+.login-wrapper > .bulat:nth-child(2) {
+    bottom: 0;
+    right: 0;
+    background-color: var(--mode-line);
+}
+.login-wrapper > .form-wrapper {
+    height: 100%;
+    background-color: var(--mode-line);
+    border-radius: 15px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 15px 20px rgba(0,0,0, 0.2);
+}
+.login-wrapper > .form-wrapper > .login {
+    height: 100%;
+    flex: 2;
+}
+.login-wrapper > .form-wrapper > .ilus-wrapper {
+    height: 100%;
+    flex: 1;
+    background: var(--base);
+    background: -moz-linear-gradient(60deg, var(--base) 0%, rgba(120,130,255,1) 100%);
+    background: -webkit-linear-gradient(60deg, var(--base) 0%, rgba(120,130,255,1) 100%);
+    background: linear-gradient(60deg, var(--base) 0%, rgba(120,130,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--base),endColorstr="rgba(255,255,255,0.5)",GradientType=1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-wrapper > .form-wrapper > .ilus-wrapper > .img {
+    width: 100%;
+    height: 100%;
+    background-image: url("/interface-only/assets/login.webp");
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 600px) {
